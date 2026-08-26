@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_ORIGIN ?? 'http://localhost:3000'),
+  metadataBase: new URL('https://cet4-score-demo-2026.red-dill-8310.chatgpt.site'),
   title: '四级成绩查询 · 界面演示',
   description: '一个不收集真实账号信息的大学英语四级成绩查询界面演示。',
   openGraph: {
