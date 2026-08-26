@@ -32,7 +32,6 @@ function PortalHeader() {
               <strong>全国大学英语等级考试</strong>
               <small>COLLEGE ENGLISH TEST · SCORE DEMO</small>
             </span>
-            <span className="unofficial-badge">非官方演示</span>
           </a>
 
           <div className="header-tools">
@@ -123,7 +122,6 @@ function QueryView({ onResult }: { onResult: () => void }) {
     <div className="content-grid">
       <section className="query-content" aria-labelledby="query-title">
         <h1 id="query-title">2026年上半年全国大学英语四级考试 成绩查询</h1>
-        <span className="title-demo-mark">界面演示 · DEMO</span>
 
         <form className="query-form" onSubmit={handleSubmit}>
           <div className="form-row">
@@ -196,7 +194,6 @@ function ResultView({ onBack }: { onBack: () => void }) {
   return (
     <section className="result-page" aria-labelledby="result-title">
       <div className="result-sheet">
-        <div className="result-demo-flag">非官方演示数据</div>
         <h1 id="result-title" ref={titleRef} tabIndex={-1}>全国大学英语四级考试 (CET4) 成绩详情</h1>
 
         <dl className="candidate-info">
