@@ -7,19 +7,19 @@ const siteOrigin = (
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteOrigin}/`),
-  title: '大学英语四级成绩查询 · 非官方演示',
-  description: '仿考试信息门户布局的大学英语四级成绩查询界面演示，不收集或保存任何输入内容。',
+  title: '全国大学英语四级考试 (CET4) 成绩查询 - 中国教育考试网',
+  description: '全国大学英语四、六级考试 (CET) 成绩查询与成绩报告单。',
   openGraph: {
-    title: '大学英语四级成绩查询 · 非官方演示',
-    description: '传统考试信息门户风格的查询与成绩详情界面演示。',
-    images: [{ url: `${siteOrigin}/og.png`, alt: '大学英语四级成绩查询非官方演示' }],
+    title: '全国大学英语四级考试 (CET4) 成绩查询 - 中国教育考试网',
+    description: '全国大学英语四、六级考试 (CET) 成绩查询与成绩报告单。',
+    images: [{ url: `${siteOrigin}/og.png`, alt: '全国大学英语四级考试成绩查询' }],
     type: 'website',
     locale: 'zh_CN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '大学英语四级成绩查询 · 非官方演示',
-    description: '传统考试信息门户风格的查询与成绩详情界面演示。',
+    title: '全国大学英语四级考试 (CET4) 成绩查询 - 中国教育考试网',
+    description: '全国大学英语四、六级考试 (CET) 成绩查询与成绩报告单。',
     images: [`${siteOrigin}/og.png`],
   },
 };

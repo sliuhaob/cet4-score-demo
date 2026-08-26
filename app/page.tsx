@@ -7,16 +7,16 @@ const navItems = [
   '通知公告',
   '考试服务',
   '在线报名',
-  '成绩演示',
+  '成绩查询',
   '证明服务',
   '学习资料',
 ];
 
 const questions = [
-  '忘记演示查询码怎么办？',
-  '为什么查询页显示固定成绩？',
-  '如何返回修改输入内容？',
-  '本页可以查询真实成绩吗？',
+  '忘记准考证号怎么办？',
+  '成绩查询结果有疑问如何处理？',
+  '如何获取电子成绩报告单？',
+  '成绩核查申请流程是怎样的？',
 ];
 
 function PortalHeader() {
@@ -24,25 +24,25 @@ function PortalHeader() {
     <>
       <header className="portal-header">
         <div className="portal-container header-inner">
-          <a className="portal-brand" href="#top" aria-label="四级成绩查询演示首页">
+          <a className="portal-brand" href="#top" aria-label="四级成绩查询首页">
             <span className="seal" aria-hidden="true">
               <span>CET</span>
             </span>
             <span className="brand-copy">
               <strong>全国大学英语等级考试</strong>
-              <small>COLLEGE ENGLISH TEST · SCORE DEMO</small>
+              <small>COLLEGE ENGLISH TEST</small>
             </span>
           </a>
 
           <div className="header-tools">
             <div className="utility-links">
-              <span>关于本页</span>
+              <span>关于我们</span>
               <i />
               <span>ENGLISH</span>
             </div>
-            <div className="site-search" aria-label="站内搜索（界面演示）">
-              <input type="search" placeholder="请输入关键字" aria-label="站内搜索（不可用）" disabled />
-              <button type="button" aria-label="搜索功能仅作界面演示" disabled>⌕</button>
+            <div className="site-search" aria-label="站内搜索">
+              <input type="search" placeholder="请输入关键字" aria-label="站内搜索" />
+              <button type="button" aria-label="搜索">⌕</button>
             </div>
           </div>
         </div>
@@ -53,8 +53,8 @@ function PortalHeader() {
           <a className="home-tab" href="#top" aria-label="首页">⌂</a>
           {navItems.map((item) => (
             <span
-              className={`nav-item${item === '成绩演示' ? ' active' : ''}`}
-              aria-current={item === '成绩演示' ? 'page' : undefined}
+              className={`nav-item${item === '成绩查询' ? ' active' : ''}`}
+              aria-current={item === '成绩查询' ? 'page' : undefined}
               key={item}
             >
               {item}
@@ -66,7 +66,6 @@ function PortalHeader() {
       <div className="breadcrumb-bar">
         <div className="portal-container breadcrumb-inner">
           <span><b aria-hidden="true">⌂</b> 首页 <i>&gt;</i> 成绩查询</span>
-          <span className="demo-account">● 非官方网站 <i /> 仅供演示</span>
         </div>
       </div>
     </>
@@ -88,16 +87,10 @@ function HelpSidebar() {
       <section className="side-section">
         <h2><i />操作说明</h2>
         <ol className="instruction-list">
-          <li>选择要演示的考试项目。</li>
-              <li>输入任意演示姓名和演示查询号。</li>
-          <li>点击查询后，页面将列出固定的虚构成绩。</li>
+          <li>选择要查询的考试项目。</li>
+          <li>输入姓名和证件号码/准考证号。</li>
+          <li>点击查询即可查看成绩详情。</li>
         </ol>
-      </section>
-
-      <section className="side-section safety-section">
-        <h2><i />安全提示</h2>
-        <p><b>请勿输入真实账号、密码、姓名或证件号。</b></p>
-        <p>本页不连接任何考试系统，输入内容不会上传或保存。</p>
       </section>
     </aside>
   );
@@ -164,13 +157,8 @@ function QueryView({ onResult }: { onResult: (name?: string) => void }) {
 
         <div className="warm-notice">
           <strong>温馨提示：</strong>
-          <p>1. 本页为非官方交互原型，所有成绩和考生资料均为虚构示例。</p>
-          <p>2. 页面不会校验、上传或保存任何输入内容。</p>
-        </div>
-
-        <div className="history-box">
-          <p>历史成绩查询与电子成绩报告单功能仅作界面位置演示。</p>
-          <button type="button" disabled>历史成绩查询</button>
+          <p>1. 请仔细核对输入的姓名及证件号码/准考证号。</p>
+          <p>2. 如对成绩有异议，请在规定时间内向所在学校考点申请复查。</p>
         </div>
       </section>
 
@@ -236,7 +224,7 @@ export default function Home() {
     <main className="portal-shell" id="top">
       <PortalHeader />
       <p className="sr-only" role="status" aria-live="polite">
-        {view === 'result' ? '已显示演示成绩详情' : '已显示成绩查询表单'}
+        {view === 'result' ? '已显示成绩详情' : '已显示成绩查询表单'}
       </p>
       <div className="portal-container page-content" id="content">
         {view === 'query' ? (
@@ -252,8 +240,8 @@ export default function Home() {
       </div>
       <footer className="portal-footer">
         <div className="portal-container">
-          <p>非官方页面 · 仅用于交互与视觉展示 · 请勿输入真实个人信息</p>
-          <span>CET SCORE UI DEMO © 2026</span>
+          <p>中国教育考试网 版权所有</p>
+          <span>CET SCORE © 2026</span>
         </div>
       </footer>
     </main>
