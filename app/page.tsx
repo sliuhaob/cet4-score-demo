@@ -131,33 +131,28 @@ function QueryView({ onResult }: { onResult: () => void }) {
             </select>
           </div>
 
-          <div className="form-row form-row-with-tip">
-            <label htmlFor="account">演示姓名：</label>
+          <div className="form-row">
+            <label htmlFor="account">姓　　名：</label>
             <input
               id="account"
               type="text"
               autoComplete="off"
               value={account}
               onChange={(event) => setAccount(event.target.value)}
-              placeholder="请输入任意演示姓名"
-              aria-describedby="input-tip"
+              placeholder="请输入姓名"
               required
             />
-            <p className="input-tip" id="input-tip">
-              <span aria-hidden="true">◉</span>
-              只需输入任意演示字符，请勿填写真实个人信息。
-            </p>
           </div>
 
           <div className="form-row">
-            <label htmlFor="query-code">演示查询号：</label>
+            <label htmlFor="query-code">证件号码 / 准考证号：</label>
             <input
               id="query-code"
               type="text"
               autoComplete="off"
               value={queryCode}
               onChange={(event) => setQueryCode(event.target.value)}
-              placeholder="请输入任意演示查询号"
+              placeholder="请输入证件号码或准考证号"
               required
             />
           </div>
