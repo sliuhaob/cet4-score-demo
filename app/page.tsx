@@ -103,7 +103,7 @@ function HelpSidebar() {
   );
 }
 
-function QueryView({ onResult }: { onResult: () => void }) {
+function QueryView({ onResult }: { onResult: (name?: string) => void }) {
   const [account, setAccount] = useState('');
   const [queryCode, setQueryCode] = useState('');
   const [loading, setLoading] = useState(false);
@@ -114,7 +114,7 @@ function QueryView({ onResult }: { onResult: () => void }) {
     setLoading(true);
     window.setTimeout(() => {
       setLoading(false);
-      onResult();
+      onResult(account.trim());
     }, 420);
   }
 
@@ -179,7 +179,7 @@ function QueryView({ onResult }: { onResult: () => void }) {
   );
 }
 
-function ResultView({ onBack }: { onBack: () => void }) {
+function ResultView({ name = '仲天佑', onBack }: { name?: string; onBack: () => void }) {
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -192,6 +192,7 @@ function ResultView({ onBack }: { onBack: () => void }) {
         <h1 id="result-title" ref={titleRef} tabIndex={-1}>全国大学英语四级考试 (CET4) 成绩详情</h1>
 
         <dl className="candidate-info">
+          <div><dt>姓　　名：</dt><dd>{name || '仲天佑'}</dd></div>
           <div><dt>学　　校：</dt><dd>苏州科技大学</dd></div>
           <div><dt>成绩报告单编号：</dt><dd>261132502002483</dd></div>
         </dl>
@@ -229,6 +230,7 @@ function ResultView({ onBack }: { onBack: () => void }) {
 
 export default function Home() {
   const [view, setView] = useState<'query' | 'result'>('query');
+  const [name, setName] = useState('仲天佑');
 
   return (
     <main className="portal-shell" id="top">
@@ -238,9 +240,14 @@ export default function Home() {
       </p>
       <div className="portal-container page-content" id="content">
         {view === 'query' ? (
-          <QueryView onResult={() => setView('result')} />
+          <QueryView
+            onResult={(submittedName) => {
+              if (submittedName) setName(submittedName);
+              setView('result');
+            }}
+          />
         ) : (
-          <ResultView onBack={() => setView('query')} />
+          <ResultView name={name} onBack={() => setView('query')} />
         )}
       </div>
       <footer className="portal-footer">
