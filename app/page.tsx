@@ -192,19 +192,18 @@ function ResultView({ onBack }: { onBack: () => void }) {
         <h1 id="result-title" ref={titleRef} tabIndex={-1}>全国大学英语四级考试 (CET4) 成绩详情</h1>
 
         <dl className="candidate-info">
-          <div><dt>姓　　名：</dt><dd>演示考生</dd></div>
-          <div><dt>证件号码：</dt><dd>34************16</dd></div>
-          <div><dt>学　　校：</dt><dd>示例大学</dd></div>
+          <div><dt>学　　校：</dt><dd>苏州科技大学</dd></div>
+          <div><dt>成绩报告单编号：</dt><dd>261132502002483</dd></div>
         </dl>
 
         <section className="score-section" aria-labelledby="written-title">
           <h2 id="written-title">笔试成绩</h2>
           <dl className="score-details">
-            <div><dt>准考证号：</dt><dd>DEMO2026CET40001</dd></div>
-            <div className="total-row"><dt>总　　分：</dt><dd>552</dd></div>
-            <div className="subscore-row"><dt>听　　力：</dt><dd>188</dd></div>
-            <div className="subscore-row"><dt>阅　　读：</dt><dd>211</dd></div>
-            <div className="subscore-row"><dt>写作和翻译：</dt><dd>153</dd></div>
+            <div><dt>准考证号：</dt><dd>325021261104819</dd></div>
+            <div className="total-row"><dt>总　　分：</dt><dd>594</dd></div>
+            <div className="subscore-row"><dt>听　　力：</dt><dd>211</dd></div>
+            <div className="subscore-row"><dt>阅　　读：</dt><dd>206</dd></div>
+            <div className="subscore-row"><dt>写作和翻译：</dt><dd>177</dd></div>
           </dl>
         </section>
 
@@ -216,13 +215,12 @@ function ResultView({ onBack }: { onBack: () => void }) {
           </dl>
         </section>
 
-        <p className="report-number">成绩报告单编号： DEMO-CET4-2026-001</p>
-
         <div className="result-notice">
-          以上内容为固定界面演示数据，与任何真实考生、学校或考试成绩无关。
+          自2026年上半年CET考试起，不再提供纸质成绩报告单。
         </div>
 
-        <button className="back-button" type="button" onClick={onBack}>返回
+        <button className="back-button" type="button" onClick={onBack}>
+          返 回
         </button>
       </div>
     </section>
