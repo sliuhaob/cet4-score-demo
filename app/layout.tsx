@@ -7,19 +7,19 @@ const siteOrigin = (
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteOrigin}/`),
-  title: '四级成绩查询 · 界面演示',
-  description: '一个不收集真实账号信息的大学英语四级成绩查询界面演示。',
+  title: '大学英语四级成绩查询 · 非官方演示',
+  description: '仿考试信息门户布局的大学英语四级成绩查询界面演示，不收集或保存任何输入内容。',
   openGraph: {
-    title: '四级成绩查询 · 界面演示',
-    description: '清晰查看总分与分项成绩。本页为非官方界面演示。',
-    images: [{ url: `${siteOrigin}/og.png`, alt: '四级成绩查询界面演示' }],
+    title: '大学英语四级成绩查询 · 非官方演示',
+    description: '传统考试信息门户风格的查询与成绩详情界面演示。',
+    images: [{ url: `${siteOrigin}/og.png`, alt: '大学英语四级成绩查询非官方演示' }],
     type: 'website',
     locale: 'zh_CN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '四级成绩查询 · 界面演示',
-    description: '清晰查看总分与分项成绩。本页为非官方界面演示。',
+    title: '大学英语四级成绩查询 · 非官方演示',
+    description: '传统考试信息门户风格的查询与成绩详情界面演示。',
     images: [`${siteOrigin}/og.png`],
   },
 };
